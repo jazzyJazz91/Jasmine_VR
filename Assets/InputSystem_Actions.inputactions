@@ -1002,21 +1002,21 @@
                 {
                     "name": "",
                     "id": "e48a086c-197e-4632-a111-27c2827d0562",
-                    "path": "",
+                    "path": "<Keyboard>/r",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Keyboard&Mouse",
                     "action": "Restart",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "f5298b1f-cbcc-40e0-9b69-1fc19329210b",
-                    "path": "",
+                    "id": "c8ec067f-bc2f-45d7-8daa-89dfb6745dfe",
+                    "path": "<Gamepad>/start",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Gamepad",
                     "action": "Restart",
                     "isComposite": false,
                     "isPartOfComposite": false
