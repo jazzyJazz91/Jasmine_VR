@@ -12,6 +12,7 @@ public abstract class BaseInteractivePuzzlePieceXR : MonoBehaviour
 {
     //public KeyCode interactKey = KeyCode.Space;
      public InputActionReference interactActionReference;
+     public bool esp32Controlled;
 
     public Rigidbody rb;
     public AudioClip activateSound;
@@ -29,7 +30,8 @@ public abstract class BaseInteractivePuzzlePieceXR : MonoBehaviour
         if (m_IsControllable)
         {
             //if(Input.GetKey(interactKey))
-            if(interactActionReference.action.IsPressed())
+             
+if(interactActionReference.action.IsPressed() || esp32Controlled && m_IsControllable)
             {
                 activateState = true;
             }
