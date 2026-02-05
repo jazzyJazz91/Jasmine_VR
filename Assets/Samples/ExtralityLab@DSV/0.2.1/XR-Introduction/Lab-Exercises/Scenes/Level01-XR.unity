@@ -406,6 +406,62 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &139065026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 139065028}
+  - component: {fileID: 139065027}
+  m_Layer: 0
+  m_Name: MqttClientManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &139065027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139065026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4b21b495ca94450ba857de0a4806cc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  brokerAddress: inf-liva-server-eth.dsv.local.su.se
+  brokerPort: 1883
+  isEncrypted: 0
+  connectionDelay: 500
+  timeoutOnConnection: 30000
+  autoConnect: 1
+  mqttUserName: unity
+  mqttPassword: extrality
+  subscribedTopic: 75f4/D0_BoardBtn
+  autoSubscribe: 1
+  flipper: {fileID: 1425680935}
+  currentState: 0
+--- !u!4 &139065028
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139065026}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 20}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &166235474 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 384889229971728208, guid: ef838aad987e6224cb9674bda577603a, type: 3}
@@ -721,20 +777,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1eb0634efe355d469872510c585f24c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &602617809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
-  m_Name: Player/Jump
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
-  m_Asset: {fileID: -944628639613478452, guid: f3f7e99f9a49341238fba3aa04196c97, type: 3}
-  m_ActionId: f1ba0d36-48eb-4cd5-b651-1c94a6531f70
 --- !u!114 &608073907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -890,6 +932,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5744019881680530819, guid: 5d8682d004bef4e148430d4ab4ac0066, type: 3}
+      propertyPath: restart
+      value: 
+      objectReference: {fileID: 1729436778}
     - target: {fileID: 5744019881680530819, guid: 5d8682d004bef4e148430d4ab4ac0066, type: 3}
       propertyPath: startingMarble
       value: 
@@ -1488,6 +1534,31 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 456343631, guid: fb48213b52699c54aa17581bde073f80, type: 3}
   m_PrefabInstance: {fileID: 1319085689}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1406561037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+  m_Name: XRI Right Locomotion/Jump
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
+  m_Asset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  m_ActionId: 01c7fda4-9c15-4167-8b87-58024f21d903
+--- !u!114 &1425680935 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8143725484479230084, guid: caa213cf95188443098e80837db19a73, type: 3}
+  m_PrefabInstance: {fileID: 5705112864281077526}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6984567fbd7ce4f1ea4e0134b831c1f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlipperXR
 --- !u!1001 &1640954733
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1768,6 +1839,20 @@ Transform:
   - {fileID: 130560371}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1729436778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+  m_Name: Controller/Grip
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
+  m_Asset: {fileID: -944628639613478452, guid: b6d5c44ebe3244b7692e81ae8265eb22, type: 3}
+  m_ActionId: c7937c78-cea4-4888-8feb-8d9da13005f2
 --- !u!1001 &1769352604
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2180,7 +2265,7 @@ PrefabInstance:
     - target: {fileID: 8143725484479230084, guid: caa213cf95188443098e80837db19a73, type: 3}
       propertyPath: interactActionReference
       value: 
-      objectReference: {fileID: 602617809}
+      objectReference: {fileID: 1406561037}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2275,3 +2360,4 @@ SceneRoots:
   - {fileID: 797675506}
   - {fileID: 491169198}
   - {fileID: 1686509459}
+  - {fileID: 139065028}

@@ -2,10 +2,12 @@ using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class TimingRecordingXR : MonoBehaviour
 {
-    public KeyCode resetKeyCode = KeyCode.R;
+    // public KeyCode resetKeyCode = KeyCode.R;
+    public InputActionReference restart;
 
     public Rigidbody startingMarble;
     public SceneCompletion sceneCompletion;
@@ -47,7 +49,8 @@ public class TimingRecordingXR : MonoBehaviour
 
         textMesh.text = timer.ToString ("0.00");
         
-        if(Input.GetKeyDown (resetKeyCode))
+        // if(Input.GetKeyDown (resetKeyCode))
+        if(restart.action.WasPressedThisFrame())
             sceneCompletion.ReloadLevel ();
     }
 
