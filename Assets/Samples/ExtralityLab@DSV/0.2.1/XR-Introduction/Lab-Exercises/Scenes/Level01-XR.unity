@@ -353,6 +353,78 @@ MonoBehaviour:
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
   m_CancelButton: Cancel
+--- !u!1 &114362008
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 114362011}
+  - component: {fileID: 114362010}
+  - component: {fileID: 114362009}
+  m_Layer: 0
+  m_Name: WebSocketClientExample
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &114362009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114362008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6984567fbd7ce4f1ea4e0134b831c1f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlipperXR
+  interactActionReference: {fileID: 0}
+  esp32Controlled: 0
+  rb: {fileID: 0}
+  activateSound: {fileID: 0}
+  deactivateSound: {fileID: 0}
+  puzzleAudioSource: {fileID: 0}
+  activateState: 0
+  playOneTimeActivateAudio: 0
+  playOneTimeDeactivateAudio: 0
+  physicsComponent: {fileID: 0}
+  power: 700
+--- !u!114 &114362010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114362008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee1741b8bc7e4d2e9f19b05af2114a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WebSocketClientExample
+  serverIP: 10.204.0.67
+  serverPort: 8081
+  flipper: {fileID: 0}
+  ledIntensity: 0
+--- !u!4 &114362011
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114362008}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 20}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &130560370
 GameObject:
   m_ObjectHideFlags: 0
@@ -2361,3 +2433,4 @@ SceneRoots:
   - {fileID: 491169198}
   - {fileID: 1686509459}
   - {fileID: 139065028}
+  - {fileID: 114362011}
